@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PerFIT — Hesabını ve verilerini silme</title>
+<meta name="description" content="PerFIT hesabının ve verilerinin nasıl silineceği: uygulama içinden adım adım silme, uygulamaya erişilemediğinde e-posta ile talep, silinen ve saklanan veriler.">
+<style>
+  :root{
+    --bg:#ffffff; --surface:#f6f8f9; --ink:#12222b; --ink-dim:#4a626e;
+    --line:#dde5e9; --accent:#0d7c93; --accent-soft:#e6f4f7;
+    --warn-bg:#fff6ed; --warn-line:#f0c9a0; --warn-ink:#7a4510;
+    --max:44rem;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d1519; --surface:#141f25; --ink:#e6eef1; --ink-dim:#93a8b2;
+      --line:#233038; --accent:#4dd0e1; --accent-soft:#122a30;
+      --warn-bg:#2a1d12; --warn-line:#6b4a28; --warn-ink:#f0c9a0;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:2.5rem 1.25rem 5rem}
+  header{border-bottom:1px solid var(--line); padding-bottom:1.5rem; margin-bottom:2rem}
+  .brand{
+    font-size:.78rem; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); font-weight:700; margin:0 0 .5rem
+  }
+  h1{font-size:1.65rem; line-height:1.3; margin:0 0 .75rem; letter-spacing:-.01em}
+  .meta{color:var(--ink-dim); font-size:.88rem; margin:0}
+  h2{
+    font-size:1.18rem; margin:2.75rem 0 .85rem; padding-top:1.25rem;
+    border-top:1px solid var(--line); letter-spacing:-.01em
+  }
+  h2:first-of-type{border-top:none; padding-top:0}
+  p,li{color:var(--ink)}
+  ul,ol{padding-left:1.35rem}
+  li{margin:.35rem 0}
+  a{color:var(--accent)}
+  code{
+    background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:.05rem .35rem; font-size:.9em
+  }
+  .callout{
+    background:var(--warn-bg); border:1px solid var(--warn-line);
+    border-left-width:4px; border-radius:6px;
+    padding:1.1rem 1.25rem; margin:1.5rem 0; color:var(--warn-ink)
+  }
+  .callout p{color:inherit; margin:.5rem 0}
+  .callout p:first-child{margin-top:0}
+  .callout p:last-child{margin-bottom:0}
+  .callout strong{color:inherit}
+  .toc{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:8px; padding:1.1rem 1.35rem; margin:1.75rem 0
+  }
+  .toc p{margin:0 0 .5rem; font-weight:700; font-size:.9rem}
+  .toc ol{margin:0; padding-left:1.2rem; font-size:.94rem}
+  .toc li{margin:.2rem 0}
+  table{
+    width:100%; border-collapse:collapse; margin:1.25rem 0;
+    font-size:.93rem; display:block; overflow-x:auto
+  }
+  th,td{border:1px solid var(--line); padding:.6rem .75rem; text-align:left; vertical-align:top}
+  th{background:var(--surface); font-weight:700}
+  .fill{
+    background:var(--accent-soft); border-radius:4px;
+    padding:.05rem .4rem; font-weight:600; color:var(--accent);
+    font-size:.93em; white-space:nowrap
+  }
+  .steps{counter-reset:step; list-style:none; padding-left:0; margin:1.35rem 0}
+  .steps>li{counter-increment:step; position:relative; padding:0 0 0 2.7rem; margin:0 0 1.2rem}
+  .steps>li::before{
+    content:counter(step); position:absolute; left:0; top:.05rem;
+    width:1.8rem; height:1.8rem; border-radius:50%;
+    background:var(--accent-soft); color:var(--accent);
+    font-weight:700; font-size:.9rem;
+    display:flex; align-items:center; justify-content:center
+  }
+  .steps>li>strong:first-child{display:block; margin-bottom:.15rem}
+  .path{
+    background:var(--surface); border:1px solid var(--line); border-radius:4px;
+    padding:.05rem .4rem; font-weight:600; font-size:.93em; white-space:nowrap
+  }
+  .back{display:inline-block; margin-bottom:1.5rem; font-size:.9rem}
+  .yes{color:var(--accent); font-weight:700}
+  footer{
+    margin-top:3.5rem; padding-top:1.5rem; border-top:1px solid var(--line);
+    color:var(--ink-dim); font-size:.87rem
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="../">← Gizlilik Politikası ve Kullanım Koşulları</a>
+
+<header>
+  <p class="brand">PerFIT</p>
+  <h1>Hesabını ve verilerini silme</h1>
+  <p class="meta">Uygulama: <strong>PerFIT</strong> (Android paket adı
+  <code>app.perfit.android</code>) · Son güncelleme:
+  <span class="fill">04.09.2026</span></p>
+</header>
+
+<div class="callout">
+  <p><strong>Hesap silme geri alınamaz.</strong> Silme tamamlandığında antrenman
+  geçmişin, şablonların, programların, özel egzersizlerin, profilin ve arkadaş
+  bağlantıların kalıcı olarak yok olur. Bunların bir kopyası bizde kalmaz;
+  geri getirme imkânımız yoktur.</p>
+</div>
+
+<div class="toc">
+  <p>İçindekiler</p>
+  <ol>
+    <li><a href="#uygulamadan">Uygulama içinden silme</a></li>
+    <li><a href="#eposta">Uygulamaya erişemiyorsan: e-posta ile talep</a></li>
+    <li><a href="#neler-silinir">Neler silinir, neler kalır</a></li>
+    <li><a href="#sureler">Süreler</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+  </ol>
+</div>
+
+<h2 id="uygulamadan">1. Uygulama içinden silme</h2>
+
+<p>En hızlı ve kesin yol budur: talebin bir kuyruğa girmez, silme sen ekrandayken
+gerçekleşir.</p>
+
+<ol class="steps">
+  <li><strong>PerFIT'i aç ve hesabına giriş yap.</strong>
+  Silme yalnızca giriş yapmış kullanıcının kendi hesabı için yapılabilir.</li>
+
+  <li><strong>Alt menüden <span class="path">Profil</span> sekmesine git.</strong></li>
+
+  <li><strong>Sağ üstteki <span class="path">Ayarlar</span> simgesine dokun.</strong></li>
+
+  <li><strong>Sayfanın en altındaki <span class="path">Hesabı Sil</span> düğmesine
+  dokun.</strong>
+  Açılan panel ne olacağını özetler.</li>
+
+  <li><strong>Kimliğini doğrula.</strong>
+  Bu, hesabını başkasının silmesini engelleyen güvenlik adımıdır:
+  <ul>
+    <li>E-posta ve şifreyle giriş yaptıysan <em>şifreni</em> yazarsın.</li>
+    <li>Google veya Apple ile giriş yaptıysan şifre sorulmaz; ilgili sağlayıcının
+    kendi onay ekranı açılır.</li>
+  </ul></li>
+
+  <li><strong>Onayla.</strong>
+  Silme başlar ve saniyeler içinde biter: önce buluttaki verin, sonra
+  telefonundaki yerel veritabanı, en son da hesabın kaldırılır. İşlem bitince
+  uygulama seni karşılama ekranına döndürür.</li>
+</ol>
+
+<div class="callout">
+  <p><strong>Uygulamayı telefondan kaldırmak hesabını silmez.</strong> Kaldırma
+  yalnızca cihazdaki kopyayı siler; hesabın ve buluttaki verin durmaya devam
+  eder. Hesabının da silinmesini istiyorsan yukarıdaki adımları izle ya da
+  aşağıdaki e-posta yolunu kullan.</p>
+</div>
+
+<h2 id="eposta">2. Uygulamaya erişemiyorsan: e-posta ile talep</h2>
+
+<p>Uygulamayı kaldırdıysan, telefonunu kaybettiysen ya da herhangi bir sebeple
+giriş yapamıyorsan silme talebini e-postayla iletebilirsin.</p>
+
+<table>
+  <tr><th>Nereye</th><td>erencem.ozturk375@gmail.com</td></tr>
+  <tr><th>Konu</th><td>PerFIT hesap silme talebi</td></tr>
+  <tr><th>Yazman gerekenler</th><td>Hesabında kullandığın <strong>e-posta
+  adresi</strong> ve hesabını silmek istediğini belirten bir cümle.</td></tr>
+  <tr><th>Nereden göndermelisin</th><td>Mümkünse hesabındaki e-posta adresinin
+  kendisinden. Başka bir adresten yazıyorsan hesabın sana ait olduğunu
+  doğrulamak için ek bilgi isteyebiliriz — bunu, bir başkasının senin hesabını
+  sildirmesini önlemek için yapıyoruz.</td></tr>
+  <tr><th>Ne kadar sürer</th><td>Talebini <strong>en geç 30 gün içinde</strong>
+  sonuçlandırır ve sana yazılı olarak bilgi veririz.</td></tr>
+</table>
+
+<h2 id="neler-silinir">3. Neler silinir, neler kalır</h2>
+
+<table>
+  <tr><th>Veri</th><th>Ne oluyor</th></tr>
+  <tr>
+    <td>Hesabın — kimlik kaydı, e-posta adresin, varsa Google/Apple bağlantın</td>
+    <td><span class="yes">Silinir.</span> Aynı e-postayla yeniden kayıt olursan
+    bu, sıfırdan yeni bir hesap olur.</td>
+  </tr>
+  <tr>
+    <td>Profil bilgilerin — ad, doğum yılı, boy, kilo, hedef, deneyim düzeyi,
+    profil fotoğrafı</td>
+    <td><span class="yes">Silinir.</span></td>
+  </tr>
+  <tr>
+    <td>Antrenman geçmişin — seanslar, egzersizler, setler, tekrarlar,
+    ağırlıklar, kişisel rekorlar</td>
+    <td><span class="yes">Silinir.</span></td>
+  </tr>
+  <tr>
+    <td>Antrenman şablonların, programların ve program gün atamaların</td>
+    <td><span class="yes">Silinir.</span></td>
+  </tr>
+  <tr>
+    <td>Kendi eklediğin özel egzersizler ve onlara ait görseller</td>
+    <td><span class="yes">Silinir.</span></td>
+  </tr>
+  <tr>
+    <td>Arkadaş bağlantıların ve bekleyen arkadaşlık isteklerin</td>
+    <td><span class="yes">Silinir</span> — iki taraftan da. Arkadaşların seni ve
+    ilerlemeni artık göremez.</td>
+  </tr>
+  <tr>
+    <td>Arama dizinindeki kaydın (görünen adın) ve arkadaşlarına gösterilen
+    ilerleme özetin</td>
+    <td><span class="yes">Silinir.</span></td>
+  </tr>
+  <tr>
+    <td>Telefonundaki yerel veritabanı ve önbellek</td>
+    <td><span class="yes">Silinir.</span> Uygulama ilk kurulmuş hâline döner.</td>
+  </tr>
+  <tr>
+    <td>Çökme (hata) kayıtları</td>
+    <td>En fazla <strong>90 gün</strong> saklanır, sonra otomatik silinir. Bu
+    kayıtlar hesabınla ilişkilendirilmez ve içlerinde antrenman verin bulunmaz;
+    yalnızca uygulamanın nerede hata verdiğini gösterirler.</td>
+  </tr>
+  <tr>
+    <td>Fatura ve muhasebe kayıtları</td>
+    <td>PerFIT'te şu an ödeme veya abonelik bulunmadığı için böyle bir kayıt
+    <strong>oluşmuyor</strong>. İleride ücretli bir özellik eklenirse, mevzuatın
+    zorunlu kıldığı kayıtlar kanuni süreleri boyunca saklanır.</td>
+  </tr>
+</table>
+
+<h2 id="sureler">4. Süreler</h2>
+
+<ul>
+  <li><strong>Anında:</strong> uygulama içinden sildiğinde buluttaki verin,
+  cihazındaki verin ve hesabın işlem sırasında kaldırılır.</li>
+  <li><strong>En geç 30 gün:</strong> yedeklerdeki kopyalar dâhil, verin
+  sistemlerimizden kalıcı olarak silinmiş olur. E-postayla gelen talepler de aynı
+  süre içinde sonuçlandırılır.</li>
+  <li><strong>En fazla 90 gün:</strong> hesapla ilişkilendirilmemiş çökme
+  kayıtlarının saklama süresi.</li>
+</ul>
+
+<h2 id="iletisim">5. İletişim</h2>
+
+<table>
+  <tr><th>Hesap silme ve kişisel veri talepleri</th><td>erencem.ozturk375@gmail.com</td></tr>
+  <tr><th>Veri sorumlusu</th><td><span class="fill">Erencem Öztürk</span></td></tr>
+  <tr><th>Tüm gizlilik metni</th><td><a href="../#hesap-silme">Gizlilik Politikası § 2.6</a></td></tr>
+</table>
+
+<footer>
+  <p>PerFIT · Hesap ve veri silme ·
+  Son güncelleme: <span class="fill">04.09.2026</span></p>
+</footer>
+
+</div>
+</body>
+</html>

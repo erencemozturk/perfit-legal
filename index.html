@@ -201,11 +201,17 @@ hazırlanmış aydınlatma metnidir.</p>
     <td>Görüntülediğin ekranlar ve orada geçirdiğin süre, dokunduğun düğmeler, uygulamanın açılış sayısı; giriş yaptıysan kullanıcı kimliğin. Antrenman verin, plan adların ve yazdığın metinler gönderilmez.</td>
     <td>Otomatik olarak toplanır</td>
   </tr>
+  <tr>
+    <td>Bildirim verisi</td>
+    <td>Cihazının bildirim anahtarı (token) ve cihaz türü, bildirim tercihlerin (Sosyal Bildirimler, Kampanya ve fırsatlar). Sana gönderilen bir bildirimde, işlemi yapan kişinin görünen adı ve varsa gönderdiği planın adı yer alır.</td>
+    <td>Bildirim izni verdiğinde otomatik oluşturulur; tercihleri sen seçersin</td>
+  </tr>
 </table>
 
 <p><strong>Toplanmayan veriler:</strong> PerFIT konum bilgisi, rehber, çağrı
-kaydı, mesaj içeriği veya reklam kimliği toplamaz. Uygulama içinde reklam
-gösterilmez ve reklam amaçlı izleme (tracking) yapılmaz.</p>
+kaydı veya mesaj içeriği toplamaz. Bugün uygulamada reklam gösterilmez, reklam
+kimliği toplanmaz ve kişisel verilerin reklam amacıyla kimseyle paylaşılmaz
+(ayrıntı: 2.4, "Reklam ve iş ortaklıkları").</p>
 
 <p><strong>Fotoğraflar:</strong> <strong>Profil fotoğrafın</strong>, hesabınla
 birlikte diğer cihazlarında da görünebilmesi için sunucularımızda saklanır.
@@ -238,6 +244,18 @@ cihazının hafızasında kalır, sunucularımıza yüklenmez.</p>
     <td><strong>Açık rızan</strong> — bağlantı isteğini gönderen ve kabul eden sensin</td>
   </tr>
   <tr>
+    <td>Arkadaşlık istekleri, kabul edilen istekler ve sana gönderilen planlar hakkında bildirim gönderilmesi</td>
+    <td>Sözleşmenin ifası (m.5/2-c) — Ayarlar'daki "Sosyal Bildirimler" anahtarıyla kapatabilirsin</td>
+  </tr>
+  <tr>
+    <td>Yeni özellik ve önemli değişiklik duyurularının bildirimle iletilmesi</td>
+    <td>Meşru menfaat (m.5/2-f)</td>
+  </tr>
+  <tr>
+    <td>Kampanya, indirim ve iş ortaklığı fırsatlarının bildirimle iletilmesi</td>
+    <td><strong>Açık onayın</strong> — yalnızca Ayarlar'daki "Kampanya ve fırsatlar" anahtarını açarsan; istediğin zaman kapatabilirsin</td>
+  </tr>
+  <tr>
     <td>Hataların tespiti, uygulamanın güvenliği ve iyileştirilmesi</td>
     <td>Meşru menfaat (m.5/2-f)</td>
   </tr>
@@ -268,8 +286,8 @@ sağlayıcıların altyapısında işlenir:</p>
   <tr><th>Sağlayıcı</th><th>Hizmet</th><th>Aktarılan veri</th></tr>
   <tr>
     <td>Google (Firebase)</td>
-    <td>Kimlik doğrulama, veri tabanı ve eşitleme, hata raporlama, kullanım ölçümü (Google Analytics)</td>
-    <td>Hesap bilgisi, antrenman verisi, profil verisi, teknik ve tanılama verisi, kullanım verisi</td>
+    <td>Kimlik doğrulama, veri tabanı ve eşitleme, hata raporlama, kullanım ölçümü (Google Analytics), bildirim gönderimi (Firebase Cloud Messaging)</td>
+    <td>Hesap bilgisi, antrenman verisi, profil verisi, teknik ve tanılama verisi, kullanım verisi, bildirim verisi</td>
   </tr>
   <tr>
     <td>Apple</td>
@@ -282,6 +300,15 @@ sağlayıcıların altyapısında işlenir:</p>
     <td>Abonelik durumu; ödeme bilgisi <strong>bize iletilmez</strong></td>
   </tr>
 </table>
+
+<p><strong>Reklam ve iş ortaklıkları.</strong> Bugün uygulamada reklam
+gösterilmez ve kişisel verilerin reklam ya da pazarlama amacıyla üçüncü
+kişilerle paylaşılmaz. İleride reklam göstermeye veya iş ortaklarıyla
+çalışmaya başlarsak bu metni önceden güncelleriz ve seni uygulama içinden
+bilgilendiririz. Kişisel verilerinin reklam veya pazarlama amacıyla üçüncü
+kişilere aktarılması yalnızca ayrıca vereceğin <strong>açık rızana</strong>
+dayanır; rızanı istediğin zaman geri alabilirsin. Sakatlık bilgin hiçbir
+koşulda reklam veya pazarlama amacıyla kullanılmaz ve paylaşılmaz.</p>
 
 <p><strong>Ödeme bilgilerin bize hiçbir zaman ulaşmaz.</strong> Kart bilgilerin
 Apple ve Google tarafından işlenir; biz yalnızca aboneliğinin aktif olup
@@ -297,8 +324,8 @@ güvenceleri içeren sözleşmelere dayanılarak gerçekleştirilir.</p>
 <p>Uygulamayı kullanmak, bu aktarımın gerçekleşmesini zorunlu kılar; aktarımı
 istemiyorsan uygulamayı yalnızca <strong>misafir modunda</strong>
 kullanabilirsin — bu modda antrenman ve profil verilerin cihazından çıkmaz;
-yalnızca kimliğinle ilişkilendirilmeyen kullanım verisi ile hata ve çökme
-kayıtları gönderilir.</p>
+yalnızca kimliğinle ilişkilendirilmeyen kullanım verisi, duyuru bildirimleri
+için cihazının bildirim anahtarı ile hata ve çökme kayıtları gönderilir.</p>
 
 <h3 id="hesap-silme">2.6 Saklama süresi ve hesabını silme</h3>
 
@@ -310,6 +337,9 @@ kayıtları gönderilir.</p>
       hesabınla ilişkilendirilmez.</li>
   <li>Kullanım verisi en fazla <strong>14 ay</strong> saklanır; bu sürenin
       sonunda yalnızca kimseyle ilişkilendirilemeyen toplu istatistikler kalır.</li>
+  <li>Bildirim anahtarın; bildirimleri kapattığında, çıkış yaptığında veya
+      hesabını sildiğinde silinir. Artık geçerli olmayan anahtarlar ilk
+      bildirim denemesinde otomatik olarak temizlenir.</li>
   <li>Mevzuat gereği saklanması zorunlu veriler (örneğin fatura ve muhasebe
       kayıtları) ilgili kanuni süreler boyunca saklanır.</li>
 </ul>

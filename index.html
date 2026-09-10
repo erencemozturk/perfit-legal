@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Gizlilik Politikası ve Kullanım Koşulları</h1>
-  <p class="meta">Yürürlük tarihi: <span class="fill">04.09.2026</span> · Son güncelleme: <span class="fill">04.09.2026</span></p>
+  <p class="meta">Yürürlük tarihi: <span class="fill">04.09.2026</span> · Son güncelleme: <span class="fill">10.09.2026</span></p>
 </header>
 
 <div class="callout">
@@ -196,6 +196,11 @@ hazırlanmış aydınlatma metnidir.</p>
     <td>Cihaz modeli, işletim sistemi sürümü, uygulama sürümü, hata ve çökme kayıtları</td>
     <td>Otomatik olarak toplanır</td>
   </tr>
+  <tr>
+    <td>Kullanım verisi</td>
+    <td>Görüntülediğin ekranlar ve orada geçirdiğin süre, dokunduğun düğmeler, uygulamanın açılış sayısı; giriş yaptıysan kullanıcı kimliğin. Antrenman verin, plan adların ve yazdığın metinler gönderilmez.</td>
+    <td>Otomatik olarak toplanır</td>
+  </tr>
 </table>
 
 <p><strong>Toplanmayan veriler:</strong> PerFIT konum bilgisi, rehber, çağrı
@@ -237,6 +242,10 @@ cihazının hafızasında kalır, sunucularımıza yüklenmez.</p>
     <td>Meşru menfaat (m.5/2-f)</td>
   </tr>
   <tr>
+    <td>Hangi özelliklerin ne kadar kullanıldığının ölçülmesi ve uygulamanın bu doğrultuda geliştirilmesi</td>
+    <td>Meşru menfaat (m.5/2-f)</td>
+  </tr>
+  <tr>
     <td>Yasal yükümlülüklerin yerine getirilmesi, taleplere cevap verilmesi</td>
     <td>Hukuki yükümlülük (m.5/2-ç), hakkın tesisi/kullanılması/korunması (m.5/2-e)</td>
   </tr>
@@ -259,8 +268,8 @@ sağlayıcıların altyapısında işlenir:</p>
   <tr><th>Sağlayıcı</th><th>Hizmet</th><th>Aktarılan veri</th></tr>
   <tr>
     <td>Google (Firebase)</td>
-    <td>Kimlik doğrulama, veri tabanı ve eşitleme, hata raporlama</td>
-    <td>Hesap bilgisi, antrenman verisi, profil verisi, teknik ve tanılama verisi</td>
+    <td>Kimlik doğrulama, veri tabanı ve eşitleme, hata raporlama, kullanım ölçümü (Google Analytics)</td>
+    <td>Hesap bilgisi, antrenman verisi, profil verisi, teknik ve tanılama verisi, kullanım verisi</td>
   </tr>
   <tr>
     <td>Apple</td>
@@ -287,7 +296,9 @@ güvenceleri içeren sözleşmelere dayanılarak gerçekleştirilir.</p>
 
 <p>Uygulamayı kullanmak, bu aktarımın gerçekleşmesini zorunlu kılar; aktarımı
 istemiyorsan uygulamayı yalnızca <strong>misafir modunda</strong>
-kullanabilirsin — bu modda verilerin cihazından çıkmaz.</p>
+kullanabilirsin — bu modda antrenman ve profil verilerin cihazından çıkmaz;
+yalnızca kimliğinle ilişkilendirilmeyen kullanım verisi ile hata ve çökme
+kayıtları gönderilir.</p>
 
 <h3 id="hesap-silme">2.6 Saklama süresi ve hesabını silme</h3>
 
@@ -297,6 +308,8 @@ kullanabilirsin — bu modda verilerin cihazından çıkmaz.</p>
       <strong>en geç 30 gün içinde</strong> kalıcı olarak silinir.</li>
   <li>Hata ve çökme kayıtları en fazla <strong>90 gün</strong> saklanır ve
       hesabınla ilişkilendirilmez.</li>
+  <li>Kullanım verisi en fazla <strong>14 ay</strong> saklanır; bu sürenin
+      sonunda yalnızca kimseyle ilişkilendirilemeyen toplu istatistikler kalır.</li>
   <li>Mevzuat gereği saklanması zorunlu veriler (örneğin fatura ve muhasebe
       kayıtları) ilgili kanuni süreler boyunca saklanır.</li>
 </ul>

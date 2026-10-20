@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Gizlilik Politikası ve Kullanım Koşulları</h1>
-  <p class="meta">Yürürlük tarihi: <span class="fill">04.09.2026</span> · Son güncelleme: <span class="fill">18.10.2026</span></p>
+  <p class="meta">Yürürlük tarihi: <span class="fill">04.09.2026</span> · Son güncelleme: <span class="fill">20.10.2026</span></p>
 </header>
 
 <div class="callout">
@@ -225,10 +225,7 @@ hazırlanmış aydınlatma metnidir.</p>
   </tr>
 </table>
 
-<p><strong>Toplanmayan veriler:</strong> PerFIT konum bilgisi, rehber, çağrı
-kaydı veya mesaj içeriği toplamaz. Bugün uygulamada reklam gösterilmez, reklam
-kimliği toplanmaz ve kişisel verilerin reklam amacıyla kimseyle paylaşılmaz
-(ayrıntı: 2.4, "Reklam ve iş ortaklıkları").</p>
+<p><strong>Cihaz kaynaklarına erişim ve uygulama içi metinler:</strong> PerFIT kesin/GPS konumuna, cihaz rehberine, çağrı kayıtlarına veya SMS ve e-posta kutularının içeriğine erişmez. Google Analytics açıkken IP adresinden türetilen yaklaşık coğrafya işlenebilir. Kişisel bildirimleri yerel saatlerde göndermek için işletim sisteminin IANA saat dilimi kimliği, bildirim anahtarıyla birlikte cihaz kaydına yazılır. Antrenör yorumlarına ve plan tekliflerine yazdığın metinler, özelliği sunmak için Firebase'e gönderilir ve ilgili kullanıcılar tarafından görülebilir. Bugün uygulamada reklam gösterilmez, reklam kimliği toplanmaz ve kişisel verilerin reklam amacıyla kimseyle paylaşılmaz (ayrıntı: 2.4, “Reklam ve iş ortaklıkları”).</p>
 
 <p><strong>Fotoğraflar:</strong> <strong>Profil fotoğrafın</strong>, hesabınla
 birlikte diğer cihazlarında da görünebilmesi için sunucularımızda saklanır;
@@ -390,30 +387,22 @@ ayrıca incelenebilir.</p>
 
 <p>Abonelik durumunu doğrulayan RevenueCat ABD'de bulunur. KVKK m.9 kapsamında bu aktarım için öngördüğümüz mekanizma (Kişisel Verileri Koruma Kurulu'nun ilan ettiği standart sözleşme) henüz tamamlanmamıştır; hazırlığı sürmektedir ve AB standart sözleşme hükümlerinin KVKK bakımından yeterli olduğunu ileri sürmüyoruz. RevenueCat'in <a href="https://www.revenuecat.com/privacy/">gizlilik politikası</a> ve <a href="https://www.revenuecat.com/dpa/">veri işleme sözleşmesi (DPA)</a> ayrıca incelenebilir.</p>
 
-<p>Uygulamayı kullanmak, Firebase aktarımının gerçekleşmesini zorunlu kılar; aktarımı
-istemiyorsan uygulamayı yalnızca <strong>misafir modunda</strong>
-kullanabilirsin — bu modda antrenman ve profil verilerin cihazından çıkmaz;
-yalnızca kimliğinle ilişkilendirilmeyen kullanım verisi (Gizlilik ve Koşullar’dan kapatmadığın sürece varsayılan açık), duyuru bildirimleri
-için cihazının bildirim anahtarı ile hata ve çökme kayıtları gönderilir. Misafir modunda da, abonelik durumunu doğrulamak için RevenueCat'e rastgele bir anonim kimlikle bağlanılır.</p>
+<p>Hesapla kullanım Firebase aktarımını gerektirir; bunu istemiyorsan uygulamayı <strong>misafir modunda</strong> kullanabilirsin. Bu modda kaydettiğin antrenman ve profil kayıtları bir PerFIT hesabına senkronlanmaz. Kullanım ölçümü açıksa antrenman süresi ve set sayısı gibi özet olaylar Firebase kullanıcı kimliği olmadan, Analytics kurulum/cihaz kimlikleri ve IP adresinden türetilen yaklaşık coğrafyayla birlikte işlenebilir. Bildirim ayarlarına göre bir FCM bildirim anahtarı ile hata ve çökme kayıtları da gönderilebilir. RevenueCat, abonelik durumunu doğrulamak için rastgele bir anonim kimlik kullanır. Bu teknik kimlikler adın veya e-posta adresin değildir, ancak verinin hiçbir kimlikle ilişkilendirilmediği anlamına gelmez.</p>
 
 <h3 id="hesap-silme">2.6 Saklama süresi ve hesabını silme</h3>
 
 <ul>
   <li><strong>Hesabın açık olduğu sürece</strong> verilerin saklanır.</li>
-  <li><strong>Sildiğin kayıtlar</strong> (antrenman, vücut ölçümü ve Akıllı Program ayarları; fotoğraf dosyaları için aşağıdaki kural geçerlidir) cihazındaki görünür listelerden hemen kaldırılır; dışa aktarma silinmiş kayıtları içermez. Hesabındaki sunucu kaydı, eşitleme için <strong>30 gün</strong> boyunca silinmiş olarak saklanır ve bu süre dolduktan sonraki günlük sunucu temizliğinde kalıcı olarak silinir. Teknik bir hata bu temizliği geciktirebilir.</li>
-  <li><strong>Vücut Takibi verilerin</strong> (ölçüler ve yedeklenen fotoğraflar dahil), Vücut Takibi rızanı geri çekene ya da kaydı silene kadar saklanır; rızayı geri çektiğinde cihazından ve hesabından silinir. <strong>Yedeklenen antrenman ve Vücut Takibi fotoğraflarının</strong> buluttaki kopyası, fotoğrafı, antrenmanı ya da Vücut Takibi kaydını silme işlemi başarıyla eşitlendiğinde silinir; fotoğrafın silindiğini belirten sunucudaki teknik kayıt eşitleme için <strong>30 gün</strong> saklanır ve ardından yukarıdaki günlük sunucu temizliği takvimini izler. Hesabını sildiğinde tüm fotoğraf yedekleri <strong>en geç 30 gün içinde</strong> kalıcı olarak silinir.</li>
-  <li>Hesabını sildiğinde profil, antrenman ve bağlantı verilerin
-      <strong>en geç 30 gün içinde</strong> kalıcı olarak silinir.</li>
+  <li><strong>Sildiğin kayıtlar</strong> (antrenman, vücut ölçümü ve Akıllı Program ayarları; fotoğraf dosyaları için aşağıdaki kural geçerlidir) cihazındaki görünür listelerden hemen kaldırılır; dışa aktarma silinmiş kayıtları içermez. Hesabındaki sunucu kaydı eşitleme için 30 günlük saklama süresine girer. PerFIT'in politikası bu sürenin sonunda kaydı fiziksel olarak silmektir. Bu kayıtlar için otomatik kalıcı temizleme şu anda etkin değildir; kayıt kaldırılana kadar saklama süresi uzayabilir. Silme talebi için 2.1'deki adresten bize yazabilirsin; otomatik temizleme veya sabit tamamlanma süresi vaat etmiyoruz.</li>
+  <li><strong>Vücut Takibi verilerin</strong> (ölçüler ve yedeklenen fotoğraflar dahil), Vücut Takibi rızanı geri çekene ya da kaydı silene kadar saklanır; rızayı geri çektiğinde cihazından ve hesabından silme işlemi başlatılır. <strong>Yedeklenen antrenman ve Vücut Takibi fotoğraflarının</strong> buluttaki kopyası, fotoğrafı, antrenmanı ya da Vücut Takibi kaydını silme işlemi başarıyla eşitlendiğinde silinir; fotoğrafın silindiğini belirten sunucudaki teknik kayıt yukarıdaki 30 günlük politikayı izler. Hesap silme işlemi fotoğraf yedeklerinin silinmesini başlatır; PerFIT'in politikası bunu 30 gün içinde tamamlamaktır. Teknik bir hata veya yeniden deneme işlemi bu süreyi uzatabilir; böyle bir durumda 2.1'deki adresten bize yazabilirsin.</li>
+  <li>Hesabını sildiğinde profil, antrenman ve bağlantı verilerini silme işlemi başlar; PerFIT'in politikası kalıcı silmeyi <strong>30 gün içinde</strong> tamamlamaktır. Teknik bir hata veya yeniden deneme işlemi bu süreyi uzatabilir; böyle bir durumda 2.1'deki adresten bize yazabilirsin.</li>
+  <li><strong>RevenueCat kaydı:</strong> PerFIT hesabını uygulama içinden silmek, bu cihazdaki RevenueCat SDK kimliğini hesaptan çıkarır; RevenueCat'in sunucusundaki müşteri/abone kaydını otomatik olarak silmez ve mağaza aboneliğini iptal etmez. RevenueCat veya mağaza, işlem, makbuz ve abonelik kayıtlarını kendi politikaları ve yasal yükümlülükleri uyarınca saklayabilir. Bu sağlayıcı kayıtlarıyla ilgili talep için 2.1'deki adresten bize yazabilirsin; sağlayıcı veya mağaza işlemi için sabit bir tamamlanma süresi vaat etmiyoruz.</li>
   <li>Kullanıcı adın bırakıldığında veya hesabın silindiğinde
       <strong>30 gün</strong> karantinada kalır.</li>
   <li>“Güç Ver” tepkileri hesabın silindiğinde kaldırılır.</li>
-  <li>Şikâyet kayıtları, hesabın silinse de hesap kimlikleri takma ada
-      çevrilerek <strong>180 gün</strong> saklanır; bu sürenin sonunda otomatik olarak
-      silinir.</li>
-  <li>Hata ve çökme kayıtları en fazla <strong>90 gün</strong> saklanır ve
-      hesabınla ilişkilendirilmez.</li>
-  <li>Kullanım verisi en fazla <strong>14 ay</strong> saklanır; bu sürenin
-      sonunda yalnızca kimseyle ilişkilendirilemeyen toplu istatistikler kalır.</li>
+  <li>Şikâyet kayıtlarındaki hesap kimlikleri hesap silinse de takma ada çevrilir ve kayıt için <strong>180 günlük</strong> bir saklama sonu belirlenir. Canlı Firestore TTL politikası etkindir; TTL silme işlemi eşzamansızdır ve kayıt son tarihten sonra kaldırılabilir, bu nedenle tam bir silme anı vaat edilmez.</li>
+  <li>Firebase Crashlytics, hata ve çökme kayıtlarını alma tarihinden 90 gün sonra canlı ve yedek sistemlerden kaldırmaya başlamayı öngörür; tüm kopyaların 90 gün içinde silindiğini vaat etmeyiz. Crashlytics ve Firebase Sessions verilerinin BigQuery dışa aktarma kopyaları ayrı saklanır; mevcut ayarda bu kopyalar için otomatik bir sona erme sınırı yapılandırılmamıştır.</li>
+  <li>Canlı Google Analytics ayarında olay verisi saklama süresi <strong>2 ay</strong>, kullanıcı verisi saklama süresi <strong>14 ay</strong> ve “yeni etkinlikte sıfırla” seçeneği açıktır. Toplu raporlar ve bağlı BigQuery dışa aktarma kopyaları ayrı saklanır; mevcut ayarda bu kopyalar için otomatik bir sona erme sınırı yapılandırılmamıştır. Bu nedenle tüm kullanım verisi kopyalarının 14 ayda silindiğini ileri sürmüyoruz.</li>
   <li>Bildirim anahtarın; bildirimleri kapattığında, çıkış yaptığında veya
       hesabını sildiğinde silinir. Artık geçerli olmayan anahtarlar ilk
       bildirim denemesinde otomatik olarak temizlenir.</li>

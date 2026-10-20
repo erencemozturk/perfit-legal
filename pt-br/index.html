@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Política de Privacidade e Termos de Uso</h1>
-  <p class="meta">Data de vigência: <span class="fill">4 de setembro de 2026</span> · Última atualização: <span class="fill">18 de outubro de 2026</span></p>
+  <p class="meta">Data de vigência: <span class="fill">4 de setembro de 2026</span> · Última atualização: <span class="fill">20 de outubro de 2026</span></p>
 </header>
 
 <div class="callout">
@@ -250,11 +250,7 @@ escreva em português para o e-mail acima.</p>
   </tr>
 </table>
 
-<p><strong>Dados que não coletamos:</strong> o PerFIT não coleta localização,
-agenda de contatos, registro de chamadas nem conteúdo de mensagens. Hoje o app
-não exibe anúncios, não coleta identificador de publicidade e não compartilha
-dados pessoais com ninguém para fins de publicidade (detalhes: 2.4, “Publicidade
-e parcerias”).</p>
+<p><strong>Acesso a recursos do aparelho e textos no app:</strong> o PerFIT não acessa a sua localização precisa/GPS, a agenda de contatos, o registro de chamadas nem o conteúdo das caixas de SMS ou e-mail do aparelho. Quando o Google Analytics está ativado, pode ser tratada uma região geográfica aproximada derivada do endereço IP. Para enviar notificações pessoais no horário local, o identificador de fuso horário IANA do sistema operacional é gravado no registro do aparelho junto com o token de notificação. Os textos que você escreve em comentários de coach e ofertas de plano são enviados ao Firebase para fornecer esses recursos e podem ser vistos pelos usuários envolvidos. Hoje o app não exibe anúncios, não coleta identificador de publicidade e não compartilha dados pessoais com ninguém para fins de publicidade (detalhes: 2.4, “Publicidade e parcerias”).</p>
 
 <p><strong>Dados sensíveis:</strong> a sua declaração de lesão, altura e peso
 são dados referentes à saúde, considerados dados pessoais sensíveis pela LGPD
@@ -449,30 +445,22 @@ do Google.</p>
 
 <p>A RevenueCat, que verifica o status da sua assinatura, fica nos Estados Unidos. A confirmação documental do mecanismo de transferência aplicável segundo a LGPD ainda está pendente. Solicitamos à RevenueCat a confirmação da adoção das cláusulas-padrão contratuais da ANPD e aguardamos a resposta. Você também pode consultar a <a href="https://www.revenuecat.com/privacy/">política de privacidade</a> e o <a href="https://www.revenuecat.com/dpa/">acordo de tratamento de dados (DPA)</a> da RevenueCat.</p>
 
-<p>Usar o app com conta exige a transferência ao Firebase. Se você não a quiser, pode usar o app apenas no <strong>modo visitante</strong>: nesse modo,
-seus dados de treino e de perfil não saem do seu aparelho; são enviados somente
-dados de uso não vinculados à sua identidade (ativados por padrão, a menos que você desative em Privacidade e termos), o token de notificação do aparelho
-(para avisos de novidades) e registros de erros e travamentos. Mesmo no modo visitante, o app se comunica com a RevenueCat com um identificador anônimo aleatório para verificar o status da assinatura.</p>
+<p>Usar o app com uma conta exige transferência ao Firebase; se você não quiser isso, pode usar o <strong>modo visitante</strong>. Os registros de treino e de perfil salvos nesse modo não são sincronizados com uma conta PerFIT. Quando a medição de uso está ativada, eventos resumidos como duração do treino e quantidade de séries podem ser tratados sem um identificador de usuário do Firebase, junto com identificadores de instalação/aparelho do Analytics e uma região geográfica aproximada derivada do endereço IP. Conforme as configurações de notificação, também podem ser enviados um token FCM e registros de erros e travamentos. A RevenueCat usa um identificador anônimo aleatório para verificar o status da assinatura. Esses identificadores técnicos não são o seu nome nem o seu e-mail, mas isso não significa que os dados não estejam vinculados a nenhum identificador.</p>
 
 <h3 id="hesap-silme">2.6 Por quanto tempo guardamos os dados e como excluir a sua conta</h3>
 
 <ul>
   <li>Guardamos os seus dados <strong>enquanto a sua conta estiver ativa.</strong></li>
-  <li><strong>Registros que você exclui</strong> (treinos, medidas corporais e ajustes do Programa inteligente; os arquivos de foto seguem a regra abaixo) saem imediatamente das listas visíveis no seu aparelho; as exportações de dados não incluem registros excluídos. O registro no servidor da sua conta continua armazenado e marcado como excluído por <strong>30 dias</strong> para a sincronização, e é apagado de forma definitiva na próxima limpeza diária do servidor depois desse período. Um erro técnico pode atrasar essa limpeza.</li>
-  <li><strong>Seus dados do Acompanhamento corporal</strong> (inclusive as fotos com backup) são mantidos até você retirar o consentimento do Acompanhamento corporal ou excluir o registro; ao retirá-lo, são excluídos do seu dispositivo e da sua conta. As cópias na nuvem das <strong>suas fotos de treino e do Acompanhamento corporal com backup</strong> são apagadas quando a exclusão da foto, do treino ou do registro do Acompanhamento corporal é sincronizada com sucesso; o registro técnico no servidor que marca a foto como excluída é mantido por <strong>30 dias</strong> para a sincronização e depois segue o cronograma de limpeza diária do servidor acima. Quando você exclui a conta, todos os backups de fotos são excluídos em definitivo <strong>em até 30 dias</strong>.</li>
-  <li>Quando você exclui a conta, os seus dados de perfil, treino e conexão são
-      apagados de forma definitiva <strong>em até 30 dias.</strong></li>
+  <li><strong>Registros que você exclui</strong> (treinos, medidas corporais e ajustes do Programa inteligente; os arquivos de foto seguem a regra abaixo) saem imediatamente das listas visíveis no seu aparelho; as exportações de dados não incluem registros excluídos. O registro no servidor da sua conta entra em um período de retenção de 30 dias para sincronização. A política do PerFIT é excluí-lo fisicamente depois desse período. A limpeza permanente automática desses registros não está ativa no momento, por isso a retenção pode se estender até o registro ser removido. Para solicitar exclusão, fale conosco pelo endereço da seção 2.1; não prometemos limpeza automática nem um prazo fixo de conclusão.</li>
+  <li><strong>Seus dados do Acompanhamento corporal</strong> (inclusive fotos com backup) são mantidos até você retirar o consentimento do Acompanhamento corporal ou excluir o registro; a retirada inicia a exclusão do aparelho e da conta. As cópias na nuvem das <strong>suas fotos de treino e do Acompanhamento corporal com backup</strong> são apagadas quando a exclusão da foto, do treino ou do registro é sincronizada com sucesso; o registro técnico no servidor que marca a foto como excluída segue a política de 30 dias acima. A exclusão da conta inicia a exclusão dos backups de fotos; a política do PerFIT é concluí-la em até 30 dias. Um erro técnico ou uma nova tentativa pode prolongar esse prazo; se isso acontecer, fale conosco pelo endereço da seção 2.1.</li>
+  <li>Quando você exclui a conta, começa a exclusão dos seus dados de perfil, treino e conexão; a política do PerFIT é concluir a exclusão permanente <strong>em até 30 dias.</strong> Um erro técnico ou uma nova tentativa pode prolongar esse prazo; se isso acontecer, fale conosco pelo endereço da seção 2.1.</li>
+  <li><strong>Registro da RevenueCat:</strong> excluir a sua conta PerFIT no app desconecta da conta a identidade do SDK da RevenueCat neste aparelho; isso não exclui automaticamente o registro de cliente/assinante nos servidores da RevenueCat nem cancela a assinatura da loja. A RevenueCat ou a loja pode manter dados de transação, recibo e assinatura de acordo com suas próprias políticas e obrigações legais. Para solicitar algo sobre esses registros do fornecedor, fale conosco pelo endereço da seção 2.1; não prometemos um prazo fixo para um processo da loja ou do fornecedor.</li>
   <li>Quando o seu nome de usuário é liberado ou a conta é excluída, ele fica em
       quarentena por <strong>30 dias.</strong></li>
   <li>As reações de “Dar força” são removidas quando a conta é excluída.</li>
-  <li>Os registros de denúncia são guardados por <strong>180 dias</strong> mesmo
-      que a conta seja excluída, com os identificadores das contas convertidos em
-      pseudônimos; depois desse prazo são removidos automaticamente.</li>
-  <li>Registros de erros e travamentos são guardados por no máximo <strong>90
-      dias</strong> e não são vinculados à sua conta.</li>
-  <li>Os dados de uso são guardados por no máximo <strong>14 meses</strong>;
-      depois disso restam apenas estatísticas agregadas, que não permitem
-      identificar ninguém.</li>
+  <li>Os identificadores de conta nos registros de denúncia são convertidos em pseudônimos após a exclusão da conta, e é definida uma data final de retenção de <strong>180 dias</strong> para o registro. A política de TTL do Firestore está ativa no ambiente real; a exclusão por TTL é assíncrona e pode ocorrer depois da data final, por isso não prometemos um momento exato para a exclusão.</li>
+  <li>O Firebase Crashlytics prevê iniciar a remoção dos registros de erros e travamentos dos sistemas ativos e de backup 90 dias após a coleta; não prometemos que todas as cópias sejam excluídas em 90 dias. As cópias exportadas para o BigQuery dos dados do Crashlytics e do Firebase Sessions têm retenção separada; a configuração atual não define um limite de expiração automática para essas cópias.</li>
+  <li>A configuração atual do Google Analytics retém dados de eventos por <strong>2 meses</strong> e dados de usuários por <strong>14 meses</strong>, com a opção de reiniciar o prazo em nova atividade ativada. Relatórios agregados e cópias exportadas para o BigQuery têm retenção separada; a configuração atual não define um limite de expiração automática para essas cópias. Por isso, não afirmamos que todas as cópias dos dados de uso sejam excluídas depois de 14 meses.</li>
   <li>O seu token de notificação é apagado quando você desliga as notificações,
       sai da conta ou a exclui. Tokens que deixaram de ser válidos são limpos
       automaticamente na primeira tentativa de envio.</li>

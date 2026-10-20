@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Privacy Policy and Terms of Use</h1>
-  <p class="meta">Effective date: <span class="fill">4 September 2026</span> · Last updated: <span class="fill">18 October 2026</span></p>
+  <p class="meta">Effective date: <span class="fill">4 September 2026</span> · Last updated: <span class="fill">20 October 2026</span></p>
 </header>
 
 <div class="callout">
@@ -231,10 +231,7 @@ every request described in 2.8.</p>
   </tr>
 </table>
 
-<p><strong>Data we do not collect:</strong> PerFIT does not collect location
-data, your contacts, call logs or message content. Today the app shows no ads,
-collects no advertising ID and shares no personal data with anyone for
-advertising (details: 2.4, "Advertising and partnerships").</p>
+<p><strong>Device access and text entered in the app:</strong> PerFIT does not access your precise/GPS location, device contacts, call logs, or the contents of your SMS or email inboxes. When Google Analytics is on, approximate geography derived from the IP address may be processed. To deliver personal notifications at local times, the operating system's IANA time-zone identifier is written to the device record with the notification token. Text you enter in coach comments and plan offers is sent to Firebase to provide those features and can be seen by the relevant users. Today the app shows no ads, collects no advertising ID and shares no personal data with anyone for advertising (details: 2.4, “Advertising and partnerships”).</p>
 
 <p><strong>Photos:</strong> <strong>Your profile photo</strong> is stored on our
 servers so that it can appear on your other devices along with your account;
@@ -428,30 +425,22 @@ applies; we rely on the safeguards it provides for, in particular the standard
 contractual clauses contained in Google's data processing terms (for Google) and in RevenueCat's data processing agreement (for RevenueCat). You can ask us
 for information about the safeguards at the address in 2.1.</p>
 
-<p>Using the app requires this transfer to take place; if you do not want it, you
-can use the app only in <strong>guest mode</strong> — in this mode your workout
-and profile data never leave your device; only usage data that is not linked to
-your identity (on by default unless you turn it off in Privacy and Terms), your device's notification token for announcement notifications
-and error and crash logs are sent. Even in guest mode, the app contacts RevenueCat with a random anonymous ID to verify the subscription status.</p>
+<p>Using the app with an account requires a Firebase transfer; if you do not want that, you can use <strong>guest mode</strong>. Workout and profile records you save in this mode are not synced to a PerFIT account. When usage measurement is on, summary events such as workout duration and set count may be processed without a Firebase user ID, together with Analytics installation/device identifiers and approximate geography derived from the IP address. Depending on notification settings, an FCM notification token and error and crash logs may also be sent. RevenueCat uses a random anonymous identifier to check subscription status. These technical identifiers are not your name or email address, but that does not mean the data is linked to no identifier.</p>
 
 <h3 id="hesap-silme">2.6 Retention and deleting your account</h3>
 
 <ul>
   <li>Your data is kept <strong>while your account is open.</strong></li>
-  <li><strong>Records you delete</strong> (workouts, body measurements and Smart Program adjustments; photo files follow the rule below) are removed from visible lists on your device immediately; data exports do not include deleted records. The server record in your account remains stored and marked as deleted for synchronization for <strong>30 days</strong>, and is permanently deleted in the next daily server cleanup after that period. A technical error may delay this cleanup.</li>
-  <li><strong>Your Body Tracking data</strong> (including backed-up photos) is kept until you withdraw your Body Tracking consent or delete the entry; when you withdraw consent it is deleted from your device and your account. The cloud copies of <strong>your backed-up workout and Body Tracking photos</strong> are deleted when deletion of the photo, workout or Body Tracking entry is successfully synced; the server-side technical record marking the photo as deleted is kept for synchronization for <strong>30 days</strong> and then follows the daily server cleanup schedule above. When you delete your account, all photo backups are permanently deleted <strong>within 30 days at the latest</strong>.</li>
-  <li>When you delete your account, your profile, workout and connection data is
-      permanently deleted <strong>within 30 days at the latest.</strong></li>
+  <li><strong>Records you delete</strong> (workouts, body measurements and Smart Program adjustments; photo files follow the rule below) are removed from visible lists on your device immediately; data exports do not include deleted records. The server record in your account enters a 30-day retention period for synchronization. PerFIT's policy is to physically delete it after that period. Automatic permanent cleanup for these records is not currently enabled, so retention may extend until the record is removed. For a deletion request, contact us at the address in 2.1; we do not promise automatic cleanup or a fixed completion time.</li>
+  <li><strong>Your Body Tracking data</strong> (including backed-up photos) is kept until you withdraw your Body Tracking consent or delete the entry; withdrawal starts deletion from your device and account. The cloud copies of <strong>your backed-up workout and Body Tracking photos</strong> are deleted when deletion of the photo, workout or Body Tracking entry is successfully synced; the server-side technical record marking the photo as deleted follows the 30-day policy above. Account deletion starts deletion of photo backups; PerFIT's policy is to complete this within 30 days. A technical error or retry may extend that period; if this happens, contact us at the address in 2.1.</li>
+  <li>When you delete your account, deletion of your profile, workout and connection data starts; PerFIT's policy is to complete permanent deletion <strong>within 30 days.</strong> A technical error or retry may extend that period; if this happens, contact us at the address in 2.1.</li>
+  <li><strong>RevenueCat record:</strong> deleting your PerFIT account in the app logs the RevenueCat SDK identity on this device out of the account; it does not automatically delete the customer/subscriber record on RevenueCat's servers or cancel the store subscription. RevenueCat or the store may retain transaction, receipt and subscription records under their own policies and legal obligations. For a request about those provider records, contact us at the address in 2.1; we do not promise a fixed completion time for a provider or store process.</li>
   <li>When your username is released or your account is deleted, it stays in
       quarantine for <strong>30 days.</strong></li>
   <li>"Power Up" reactions are removed when your account is deleted.</li>
-  <li>Report records are kept for <strong>180 days</strong> even if your account
-      is deleted, with account IDs converted to pseudonyms; after that period
-      they are deleted automatically.</li>
-  <li>Error and crash logs are kept for at most <strong>90 days</strong> and are
-      not linked to your account.</li>
-  <li>Usage data is kept for at most <strong>14 months</strong>; after that only
-      aggregate statistics that cannot be linked to anyone remain.</li>
+  <li>Account IDs in report records are converted to pseudonyms after account deletion and a <strong>180-day</strong> retention deadline is set for the record. The live Firestore TTL policy is active; TTL deletion is asynchronous and can occur after the deadline, so no exact deletion time is promised.</li>
+  <li>Firebase Crashlytics provides for starting removal of error and crash records from live and backup systems 90 days after collection; we do not promise that every copy is deleted within 90 days. BigQuery export copies of Crashlytics and Firebase Sessions data are retained separately; the current setting does not configure an automatic expiration limit for those copies.</li>
+  <li>The live Google Analytics setting retains event data for <strong>2 months</strong> and user data for <strong>14 months</strong>, with “reset on new activity” enabled. Aggregate reports and linked BigQuery export copies are retained separately; the current setting does not configure an automatic expiration limit for those copies. We therefore do not claim that every copy of usage data is deleted after 14 months.</li>
   <li>Your notification token is deleted when you turn notifications off, sign
       out or delete your account. Tokens that are no longer valid are cleaned up
       automatically on the first delivery attempt.</li>

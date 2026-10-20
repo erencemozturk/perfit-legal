@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Datenschutzerklärung und Nutzungsbedingungen</h1>
-  <p class="meta">Gültig ab: <span class="fill">4. September 2026</span> · Zuletzt aktualisiert: <span class="fill">18. Oktober 2026</span></p>
+  <p class="meta">Gültig ab: <span class="fill">4. September 2026</span> · Zuletzt aktualisiert: <span class="fill">20. Oktober 2026</span></p>
 </header>
 
 <div class="callout">
@@ -237,11 +237,7 @@ und für alle in 2.8 beschriebenen Anfragen.</p>
   </tr>
 </table>
 
-<p><strong>Daten, die wir nicht erheben:</strong> PerFIT erhebt keine
-Standortdaten, keine Kontakte, keine Anruflisten und keine Nachrichteninhalte.
-Die App zeigt derzeit keine Werbung, erhebt keine Werbe-ID und gibt keine
-personenbezogenen Daten zu Werbezwecken an Dritte weiter (Einzelheiten: 2.4,
-„Werbung und Partnerschaften“).</p>
+<p><strong>Gerätezugriffe und Texte in der App:</strong> PerFIT greift nicht auf deinen genauen/GPS-Standort, deine Gerätekontakte, Anruflisten oder den Inhalt deiner SMS- oder E-Mail-Postfächer zu. Wenn Google Analytics aktiv ist, kann eine aus der IP-Adresse abgeleitete ungefähre geografische Region verarbeitet werden. Damit persönliche Benachrichtigungen zu lokalen Zeiten zugestellt werden, wird die IANA-Zeitzonenkennung des Betriebssystems zusammen mit dem Benachrichtigungs-Token im Gerätedatensatz gespeichert. Texte, die du in Coach-Kommentare und Planangebote eingibst, werden zur Bereitstellung dieser Funktionen an Firebase gesendet und können von den beteiligten Nutzern gesehen werden. Die App zeigt derzeit keine Werbung, erhebt keine Werbe-ID und gibt keine personenbezogenen Daten zu Werbezwecken an Dritte weiter (Einzelheiten: 2.4, „Werbung und Partnerschaften“).</p>
 
 <p><strong>Fotos:</strong> <strong>Dein Profilfoto</strong> wird auf unseren
 Servern gespeichert, damit es zusammen mit deinem Konto auch auf deinen anderen
@@ -447,33 +443,22 @@ Garantien, insbesondere auf die Standardvertragsklauseln in den
 Datenverarbeitungsbedingungen von Google (für Google) und in der Auftragsverarbeitungsvereinbarung von RevenueCat (für RevenueCat). Informationen zu den Garantien kannst
 du unter der Adresse in 2.1 bei uns anfragen.</p>
 
-<p>Die Nutzung der App setzt voraus, dass diese Übermittlung stattfindet; wenn du
-das nicht möchtest, kannst du die App nur im <strong>Gastmodus</strong> nutzen –
-in diesem Modus verlassen deine Workout- und Profildaten dein Gerät nie; es
-werden nur nicht mit deiner Identität verknüpfte Nutzungsdaten (standardmäßig aktiv, sofern du sie nicht unter Datenschutz und Bedingungen ausschaltest), das
-Benachrichtigungs-Token deines Geräts für Ankündigungsbenachrichtigungen sowie
-Fehler- und Absturzprotokolle gesendet. Auch im Gastmodus kontaktiert die App RevenueCat mit einer zufälligen anonymen ID, um den Abonnementstatus zu überprüfen.</p>
+<p>Die Nutzung mit einem Konto erfordert eine Übermittlung an Firebase; wenn du das nicht möchtest, kannst du den <strong>Gastmodus</strong> verwenden. Workout- und Profildatensätze, die du in diesem Modus speicherst, werden nicht mit einem PerFIT-Konto synchronisiert. Wenn die Nutzungsmessung aktiv ist, können zusammengefasste Ereignisse wie Workout-Dauer und Satzanzahl ohne Firebase-Nutzer-ID verarbeitet werden, zusammen mit Analytics-Installations-/Gerätekennungen und einer aus der IP-Adresse abgeleiteten ungefähren geografischen Region. Je nach Benachrichtigungseinstellungen können auch ein FCM-Token sowie Fehler- und Absturzprotokolle gesendet werden. RevenueCat verwendet eine zufällige anonyme Kennung, um den Abonnementstatus zu prüfen. Diese technischen Kennungen sind weder dein Name noch deine E-Mail-Adresse; das bedeutet jedoch nicht, dass die Daten mit keiner Kennung verknüpft sind.</p>
 
 <h3 id="hesap-silme">2.6 Speicherdauer und Löschen deines Kontos</h3>
 
 <ul>
   <li>Deine Daten werden gespeichert, <strong>solange dein Konto besteht.</strong></li>
-  <li><strong>Datensätze, die du löschst</strong> (Workouts, Körpermessungen und Anpassungen des Intelligenten Programms; für Fotodateien gilt die Regel unten), werden sofort aus den sichtbaren Listen auf deinem Gerät entfernt; ein Datenexport enthält gelöschte Datensätze nicht. Der Datensatz auf dem Server in deinem Konto bleibt für die Synchronisierung <strong>30 Tage</strong> lang gespeichert und als gelöscht markiert; nach Ablauf dieses Zeitraums wird er bei der nächsten täglichen Serverbereinigung endgültig gelöscht. Ein technischer Fehler kann diese Bereinigung verzögern.</li>
-  <li><strong>Deine Körperverlauf-Daten</strong> (einschließlich gesicherter Fotos) werden gespeichert, bis du deine Einwilligung zum Körperverlauf widerrufst oder den Eintrag löschst; beim Widerruf werden sie von deinem Gerät und aus deinem Konto gelöscht. Die Cloud-Kopien <strong>deiner gesicherten Workout- und Körperverlauf-Fotos</strong> werden gelöscht, sobald die Löschung des Fotos, Workouts oder Körperverlauf-Eintrags erfolgreich synchronisiert wurde; der technische Datensatz auf dem Server, der das Foto als gelöscht kennzeichnet, wird für die Synchronisierung <strong>30 Tage</strong> lang gespeichert und folgt danach dem oben beschriebenen täglichen Serverbereinigungszeitplan. Wenn du dein Konto löschst, werden alle Foto-Backups <strong>spätestens innerhalb von 30 Tagen</strong> endgültig gelöscht.</li>
-  <li>Wenn du dein Konto löschst, werden dein Profil sowie deine Workout- und
-      Verbindungsdaten <strong>spätestens innerhalb von 30 Tagen</strong>
-      endgültig gelöscht.</li>
+  <li><strong>Datensätze, die du löschst</strong> (Workouts, Körpermessungen und Anpassungen des Intelligenten Programms; für Fotodateien gilt die Regel unten), werden sofort aus den sichtbaren Listen auf deinem Gerät entfernt; ein Datenexport enthält gelöschte Datensätze nicht. Der Serverdatensatz in deinem Konto geht für die Synchronisierung in eine 30-tägige Aufbewahrungsfrist. Die PerFIT-Richtlinie sieht seine physische Löschung nach Ablauf dieser Frist vor. Die automatische dauerhafte Bereinigung dieser Datensätze ist derzeit nicht aktiv; die Aufbewahrung kann deshalb bis zur Entfernung des Datensatzes länger dauern. Für einen Löschantrag kontaktiere uns unter der Adresse in 2.1; wir versprechen weder eine automatische Bereinigung noch eine feste Abschlussfrist.</li>
+  <li><strong>Deine Körperverlauf-Daten</strong> (einschließlich gesicherter Fotos) werden gespeichert, bis du deine Einwilligung zum Körperverlauf widerrufst oder den Eintrag löschst; der Widerruf startet die Löschung vom Gerät und aus dem Konto. Die Cloud-Kopien <strong>deiner gesicherten Workout- und Körperverlauf-Fotos</strong> werden gelöscht, sobald die Löschung des Fotos, Workouts oder Körperverlauf-Eintrags erfolgreich synchronisiert wurde; der technische Serverdatensatz, der das Foto als gelöscht kennzeichnet, folgt der oben beschriebenen 30-Tage-Richtlinie. Das Löschen des Kontos startet die Löschung der Foto-Backups; die PerFIT-Richtlinie sieht den Abschluss innerhalb von 30 Tagen vor. Ein technischer Fehler oder eine Wiederholung kann diese Frist verlängern; kontaktiere uns dann unter der Adresse in 2.1.</li>
+  <li>Wenn du dein Konto löschst, beginnt die Löschung deiner Profil-, Workout- und Verbindungsdaten; die PerFIT-Richtlinie sieht den Abschluss der dauerhaften Löschung <strong>innerhalb von 30 Tagen</strong> vor. Ein technischer Fehler oder eine Wiederholung kann diese Frist verlängern; kontaktiere uns dann unter der Adresse in 2.1.</li>
+  <li><strong>RevenueCat-Datensatz:</strong> Wenn du dein PerFIT-Konto in der App löschst, wird die RevenueCat-SDK-Identität auf diesem Gerät vom Konto abgemeldet; der Kunden-/Abonnentendatensatz auf den Servern von RevenueCat wird dadurch nicht automatisch gelöscht und das Store-Abonnement nicht gekündigt. RevenueCat oder der Store können Transaktions-, Beleg- und Abonnementdaten nach ihren eigenen Richtlinien und gesetzlichen Pflichten speichern. Für eine Anfrage zu diesen Anbieterdaten kontaktiere uns unter der Adresse in 2.1; wir versprechen keine feste Bearbeitungsfrist für einen Vorgang des Anbieters oder Stores.</li>
   <li>Wenn dein Benutzername freigegeben oder dein Konto gelöscht wird, bleibt er
       <strong>30 Tage</strong> in Quarantäne.</li>
   <li>„Daumen-hoch“-Reaktionen werden entfernt, wenn dein Konto gelöscht wird.</li>
-  <li>Meldungsprotokolle werden auch dann <strong>180 Tage</strong> aufbewahrt,
-      wenn dein Konto gelöscht wird, wobei Konto-IDs in Pseudonyme umgewandelt
-      werden; danach werden sie automatisch gelöscht.</li>
-  <li>Fehler- und Absturzprotokolle werden höchstens <strong>90 Tage</strong>
-      aufbewahrt und sind nicht mit deinem Konto verknüpft.</li>
-  <li>Nutzungsdaten werden höchstens <strong>14 Monate</strong> aufbewahrt;
-      danach bleiben nur aggregierte Statistiken, die niemandem zugeordnet werden
-      können.</li>
+  <li>Konto-IDs in Meldungsprotokollen werden nach der Kontolöschung pseudonymisiert, und für den Datensatz wird eine Aufbewahrungsfrist von <strong>180 Tagen</strong> festgelegt. Die aktive Firestore-TTL-Richtlinie ist eingeschaltet; die TTL-Löschung erfolgt asynchron und kann nach Ablauf der Frist stattfinden, daher wird kein genauer Löschzeitpunkt zugesagt.</li>
+  <li>Firebase Crashlytics sieht vor, 90 Tage nach der Erhebung mit der Entfernung von Fehler- und Absturzdatensätzen aus Live- und Sicherungssystemen zu beginnen; wir sagen nicht zu, dass jede Kopie innerhalb von 90 Tagen gelöscht ist. BigQuery-Exportkopien von Crashlytics- und Firebase-Sessions-Daten werden getrennt aufbewahrt; die aktuelle Einstellung legt für diese Kopien keine automatische Ablauffrist fest.</li>
+  <li>Die aktuelle Google-Analytics-Einstellung bewahrt Ereignisdaten <strong>2 Monate</strong> und Nutzerdaten <strong>14 Monate</strong> auf; „bei neuer Aktivität zurücksetzen“ ist aktiviert. Aggregierte Berichte und verknüpfte BigQuery-Exportkopien werden getrennt aufbewahrt; die aktuelle Einstellung legt für diese Kopien keine automatische Ablauffrist fest. Wir behaupten daher nicht, dass jede Kopie der Nutzungsdaten nach 14 Monaten gelöscht wird.</li>
   <li>Dein Benachrichtigungs-Token wird gelöscht, wenn du Benachrichtigungen
       ausschaltest, dich abmeldest oder dein Konto löschst. Nicht mehr gültige
       Token werden beim ersten Zustellversuch automatisch bereinigt.</li>

@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Politique de confidentialité et conditions d'utilisation</h1>
-  <p class="meta">Date d'entrée en vigueur : <span class="fill">4 septembre 2026</span> · Dernière mise à jour : <span class="fill">18 octobre 2026</span></p>
+  <p class="meta">Date d'entrée en vigueur : <span class="fill">4 septembre 2026</span> · Dernière mise à jour : <span class="fill">20 octobre 2026</span></p>
 </header>
 
 <div class="callout">
@@ -239,12 +239,7 @@ et pour toute demande décrite en 2.8.</p>
   </tr>
 </table>
 
-<p><strong>Données que nous ne collectons pas :</strong> PerFIT ne collecte ni
-données de localisation, ni tes contacts, ni tes journaux d'appels, ni le contenu
-de tes messages. Aujourd'hui, l'application n'affiche aucune publicité, ne
-collecte aucun identifiant publicitaire et ne partage aucune donnée personnelle
-avec qui que ce soit à des fins publicitaires (détails : 2.4, « Publicité et
-partenariats »).</p>
+<p><strong>Accès aux ressources de l'appareil et textes saisis dans l'application :</strong> PerFIT n'accède ni à ta position précise/GPS, ni aux contacts de ton appareil, ni aux journaux d'appels, ni au contenu de tes boîtes SMS ou e-mail. Lorsque Google Analytics est activé, une zone géographique approximative dérivée de l'adresse IP peut être traitée. Pour envoyer les notifications personnelles aux heures locales, l'identifiant de fuseau horaire IANA du système d'exploitation est enregistré dans la fiche de l'appareil avec le jeton de notification. Les textes que tu saisis dans les commentaires du coach et les offres de programme sont envoyés à Firebase pour fournir ces fonctions et peuvent être vus par les utilisateurs concernés. Aujourd'hui, l'application n'affiche aucune publicité, ne collecte aucun identifiant publicitaire et ne partage aucune donnée personnelle avec qui que ce soit à des fins publicitaires (détails : 2.4, « Publicité et partenariats »).</p>
 
 <p><strong>Photos :</strong> <strong>Ta photo de profil</strong> est stockée sur nos
 serveurs afin de pouvoir apparaître sur tes autres appareils avec ton compte ;
@@ -454,31 +449,22 @@ particulier les clauses contractuelles types figurant dans les conditions de
 traitement des données de Google (pour Google) et dans l'accord de traitement des données de RevenueCat (pour RevenueCat). Tu peux nous demander des informations sur ces
 garanties à l'adresse indiquée en 2.1.</p>
 
-<p>L'utilisation de l'application nécessite ce transfert ; si tu ne le souhaites
-pas, tu peux utiliser l'application uniquement en <strong>mode invité</strong> :
-dans ce mode, tes données de séance et de profil ne quittent jamais ton
-appareil ; seuls les données d'utilisation non liées à ton identité (activées par défaut sauf si tu les désactives dans Confidentialité et conditions), le jeton de
-notification de ton appareil pour les notifications d'annonces et les journaux d'erreurs et de plantages sont envoyés. Même en mode invité, l'application contacte RevenueCat avec un identifiant anonyme aléatoire pour vérifier l'état de l'abonnement.</p>
+<p>L'utilisation avec un compte nécessite un transfert vers Firebase ; si tu ne le souhaites pas, tu peux utiliser le <strong>mode invité</strong>. Les enregistrements de séance et de profil sauvegardés dans ce mode ne sont pas synchronisés avec un compte PerFIT. Lorsque la mesure d'audience est activée, des événements récapitulatifs comme la durée de la séance et le nombre de séries peuvent être traités sans identifiant utilisateur Firebase, avec des identifiants d'installation/d'appareil Analytics et une zone géographique approximative dérivée de l'adresse IP. Selon les réglages de notification, un jeton FCM ainsi que des journaux d'erreurs et de plantages peuvent aussi être envoyés. RevenueCat utilise un identifiant anonyme aléatoire pour vérifier l'état de l'abonnement. Ces identifiants techniques ne sont ni ton nom ni ton adresse e-mail, mais cela ne signifie pas que les données ne sont liées à aucun identifiant.</p>
 
 <h3 id="hesap-silme">2.6 Durée de conservation et suppression de ton compte</h3>
 
 <ul>
   <li>Tes données sont conservées <strong>tant que ton compte est ouvert.</strong></li>
-  <li><strong>Les enregistrements que tu supprimes</strong> (séances, mesures corporelles et ajustements du Programme intelligent ; les fichiers photo suivent la règle ci-dessous) sont immédiatement retirés des listes visibles sur ton appareil ; un export de données ne contient pas les enregistrements supprimés. L'enregistrement sur le serveur dans ton compte reste conservé et marqué comme supprimé pendant <strong>30 jours</strong> pour la synchronisation ; après ce délai, il est définitivement supprimé lors du nettoyage quotidien suivant sur le serveur. Une erreur technique peut retarder ce nettoyage.</li>
-  <li><strong>Tes données du Suivi corporel</strong> (photos sauvegardées comprises) sont conservées jusqu'à ce que tu retires ton consentement au Suivi corporel ou supprimes l'entrée ; au retrait, elles sont supprimées de ton appareil et de ton compte. Les copies dans le cloud de <strong>tes photos de séance et du Suivi corporel sauvegardées</strong> sont supprimées lorsque la suppression de la photo, de la séance ou de l'entrée du Suivi corporel est synchronisée avec succès ; l'enregistrement technique sur le serveur qui indique que la photo est supprimée est conservé pendant <strong>30 jours</strong> pour la synchronisation, puis suit le calendrier de nettoyage quotidien sur le serveur ci-dessus. Lorsque tu supprimes ton compte, toutes les sauvegardes de photos sont définitivement supprimées <strong>au plus tard sous 30 jours</strong>.</li>
-  <li>Lorsque tu supprimes ton compte, tes données de profil, de séance et de liens
-      sont définitivement supprimées <strong>dans un délai de 30 jours au plus.</strong></li>
+  <li><strong>Les enregistrements que tu supprimes</strong> (séances, mesures corporelles et ajustements du Programme intelligent ; les fichiers photo suivent la règle ci-dessous) sont immédiatement retirés des listes visibles sur ton appareil ; un export de données ne contient pas les enregistrements supprimés. L'enregistrement serveur de ton compte entre dans une période de conservation de 30 jours pour la synchronisation. La politique de PerFIT prévoit sa suppression physique à l'issue de cette période. Le nettoyage permanent automatique de ces enregistrements n'est pas actif actuellement ; la conservation peut donc se prolonger jusqu'à la suppression de l'enregistrement. Pour demander une suppression, contacte-nous à l'adresse indiquée en 2.1 ; nous ne promettons ni nettoyage automatique ni délai fixe d'achèvement.</li>
+  <li><strong>Tes données du Suivi corporel</strong> (photos sauvegardées comprises) sont conservées jusqu'à ce que tu retires ton consentement au Suivi corporel ou supprimes l'entrée ; le retrait lance leur suppression de ton appareil et de ton compte. Les copies dans le cloud de <strong>tes photos de séance et du Suivi corporel sauvegardées</strong> sont supprimées lorsque la suppression de la photo, de la séance ou de l'entrée est correctement synchronisée ; l'enregistrement technique du serveur qui marque la photo comme supprimée suit la politique de 30 jours ci-dessus. La suppression du compte lance la suppression des sauvegardes de photos ; la politique de PerFIT prévoit de l'achever dans un délai de 30 jours. Une erreur technique ou une nouvelle tentative peut prolonger ce délai ; dans ce cas, contacte-nous à l'adresse indiquée en 2.1.</li>
+  <li>Lorsque tu supprimes ton compte, la suppression de tes données de profil, de séance et de liens commence ; la politique de PerFIT prévoit d'achever la suppression définitive <strong>dans un délai de 30 jours.</strong> Une erreur technique ou une nouvelle tentative peut prolonger ce délai ; dans ce cas, contacte-nous à l'adresse indiquée en 2.1.</li>
+  <li><strong>Enregistrement RevenueCat :</strong> supprimer ton compte PerFIT dans l'application déconnecte du compte l'identité du SDK RevenueCat sur cet appareil ; cela ne supprime pas automatiquement l'enregistrement client/abonné sur les serveurs de RevenueCat et n'annule pas l'abonnement de la boutique. RevenueCat ou la boutique peut conserver les données de transaction, de reçu et d'abonnement selon ses propres politiques et obligations légales. Pour une demande concernant ces données du prestataire, contacte-nous à l'adresse indiquée en 2.1 ; nous ne promettons aucun délai fixe pour une procédure du prestataire ou de la boutique.</li>
   <li>Lorsque ton nom d'utilisateur est libéré ou que ton compte est supprimé, ce
       nom reste en quarantaine pendant <strong>30 jours.</strong></li>
   <li>Les réactions « Bravo » sont supprimées lorsque ton compte est supprimé.</li>
-  <li>Les signalements sont conservés pendant <strong>180 jours</strong> même si
-      ton compte est supprimé, les identifiants de compte étant remplacés par des
-      pseudonymes ; à l'issue de ce délai, ils sont supprimés automatiquement.</li>
-  <li>Les journaux d'erreurs et de plantages sont conservés <strong>90 jours</strong>
-      au maximum et ne sont pas liés à ton compte.</li>
-  <li>Les données d'utilisation sont conservées <strong>14 mois</strong> au
-      maximum ; ensuite, seules subsistent des statistiques agrégées qui ne
-      peuvent être rattachées à personne.</li>
+  <li>Les identifiants de compte figurant dans les signalements sont remplacés par des pseudonymes après la suppression du compte, et une échéance de conservation de <strong>180 jours</strong> est fixée pour l'enregistrement. La politique TTL Firestore active est en vigueur ; la suppression TTL est asynchrone et peut intervenir après l'échéance, aucun moment précis de suppression n'est donc promis.</li>
+  <li>Firebase Crashlytics prévoit de commencer le retrait des enregistrements d'erreurs et de plantages des systèmes actifs et de sauvegarde 90 jours après leur collecte ; nous ne promettons pas que chaque copie soit supprimée sous 90 jours. Les copies exportées vers BigQuery des données Crashlytics et Firebase Sessions sont conservées séparément ; le réglage actuel ne fixe aucune limite d'expiration automatique pour ces copies.</li>
+  <li>Le réglage Google Analytics actif conserve les données d'événements pendant <strong>2 mois</strong> et les données utilisateur pendant <strong>14 mois</strong>, avec l'option « réinitialiser lors d'une nouvelle activité » activée. Les rapports agrégés et les copies exportées vers BigQuery sont conservés séparément ; le réglage actuel ne fixe aucune limite d'expiration automatique pour ces copies. Nous n'affirmons donc pas que chaque copie des données d'utilisation est supprimée après 14 mois.</li>
   <li>Ton jeton de notification est supprimé lorsque tu désactives les
       notifications, te déconnectes ou supprimes ton compte. Les jetons qui ne
       sont plus valides sont automatiquement effacés lors de la première

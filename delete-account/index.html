@@ -298,9 +298,12 @@ silme talepleri için de geçerlidir.</p>
     <strong>90 gün</strong> sakladıktan sonra canlı ve yedek sistemlerinden
     kaldırma sürecini başlatır. Bu, bütün kopyaların 90. gün silindiği anlamına
     gelmez. Bu kayıtlarda cihaz/kurulum tanımlayıcıları ve teknik hata
-    ayrıntıları bulunabilir. BigQuery'ye dışa aktarılan çökme verileri ayrı
-    saklanır; bu dışa aktarımlar için şu anda otomatik süre sonu
-    yapılandırılmamıştır.</td>
+    ayrıntıları bulunabilir. BigQuery'deki günlük Crashlytics bölümleri olay
+    tarihine göre 90 günde, Firebase Sessions günlük bölümleri alım tarihine
+    göre 30 günde sona erer; gerçek zamanlı bölümlerde 30 günlük sınır korunur.
+    BigQuery, sona eren veya silinen veriyi 7 günlük geri getirme süresi ve
+    ardından Google'ın 7 günlük acil kurtarma süresi boyunca saklayabilir;
+    bu, tüm fiziksel kopyaların o anda silindiği anlamına gelmez.</td>
   </tr>
   <tr>
     <td>Mağaza aboneliğin</td>
@@ -340,9 +343,15 @@ silme talepleri için de geçerlidir.</p>
   otomatik kalıcı silme henüz etkinleştirilmemiştir. Bu kayıtların sunucudan
   temizlenmesi için aşağıdaki iletişim adresinden silme talebi iletebilirsin.
   Hesap silmeye bağlı sunucu temizliği bu periyodik işlemden bağımsızdır.</li>
-  <li><strong>Çökme kayıtları:</strong> Crashlytics 90 gün sonrasında kaldırma
-  sürecini başlatır. BigQuery dışa aktarımları ayrı silme veya saklama süresi
-  ayarı gerektirir; mevcut dışa aktarımlarda otomatik süre sonu yoktur.</li>
+  <li><strong>Çökme ve dışa aktarma kayıtları:</strong> Crashlytics 90 gün
+  sonrasında kaldırma sürecini başlatır. BigQuery'de günlük Crashlytics
+  bölümleri olay tarihine göre 90 günde, günlük Firebase Sessions bölümleri
+  alım tarihine göre 30 günde sona erer; gerçek zamanlı bölümlerde 30 günlük
+  sınır korunur. Mevcut Analytics günlük tabloları, tablo adındaki UTC tarihten
+  420 gün sonra sona erecek şekilde ayarlanmıştır; yeni tabloların varsayılan
+  sona erme süresi oluşturulmalarından itibaren 420 gündür. BigQuery'nin 7 günlük
+  geri getirme ve ardından Google'ın 7 günlük acil kurtarma süresi ayrıca
+  geçerlidir; tüm fiziksel kopyaların aynı anda silindiğini vaat etmiyoruz.</li>
   <li><strong>30 gün:</strong> bırakılan kullanıcı adının karantina süresi.</li>
   <li><strong>180 gün ve asenkron silme:</strong> hesap kimlikleri takma ada
   çevrilmiş şikâyet kayıtlarının saklama süresi dolduktan sonra TTL silmesi

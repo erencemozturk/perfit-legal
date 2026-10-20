@@ -105,15 +105,14 @@
   <h1>Hesabını ve verilerini silme</h1>
   <p class="meta">Uygulama: <strong>PerFIT</strong> (Android paket adı
   <code>app.perfit.android</code>) · Son güncelleme:
-  <span class="fill">23.09.2026</span></p>
+  <span class="fill">20.10.2026</span></p>
 </header>
 
 <div class="callout">
-  <p><strong>Hesap silme geri alınamaz.</strong> Silme tamamlandığında antrenman
-  geçmişin, şablonların, programların, özel egzersizlerin, profilin ve arkadaş
-  bağlantıların kalıcı olarak yok olur. Kullanıcı adı 30 gün karantinada,
-  şikâyet kayıtları ise kimlikleri takma adla değiştirilerek 180 gün kalır;
-  diğer verilerin geri getirme imkânımız yoktur.</p>
+  <p><strong>Hesap silme geri alınamaz.</strong> Profilin, antrenman geçmişin,
+  şablonların, programların, özel egzersizlerin ve arkadaş bağlantıların aşağıdaki
+  saklama takvimine göre silinir. Kullanıcı adı 30 gün karantinada, şikâyet
+  kayıtları ise kimlikleri takma adla değiştirilerek 180 gün kalır.</p>
 </div>
 
 <div class="toc">
@@ -129,8 +128,9 @@
 
 <h2 id="uygulamadan">1. Uygulama içinden silme</h2>
 
-<p>En hızlı ve kesin yol budur: talebin bir kuyruğa girmez, silme sen ekrandayken
-gerçekleşir.</p>
+<p>Uygulama, giriş yaptığın hesabın silme işlemini başlatır. Cihazındaki oturum ve
+yerel veriler işlem sırasında kaldırılır; bulut kayıtları ve yedekler aşağıdaki
+saklama takvimine göre silinir.</p>
 
 <ol class="steps">
   <li><strong>PerFIT'i aç ve hesabına giriş yap.</strong>
@@ -153,9 +153,10 @@ gerçekleşir.</p>
   </ul></li>
 
   <li><strong>Onayla.</strong>
-  Silme başlar ve saniyeler içinde biter: önce buluttaki verin, sonra
-  telefonundaki yerel veritabanı, en son da hesabın kaldırılır. İşlem bitince
-  uygulama seni karşılama ekranına döndürür.</li>
+  Silme işlemi başlar; hesabına erişim kaldırılır, telefonundaki yerel veritabanı
+  temizlenir ve oturumun kapatılır. Bulut kayıtlarının ve yedeklerin silinmesi
+  aşağıdaki saklama takvimine göre devam edebilir. İşlem bitince uygulama seni
+  karşılama ekranına döndürür.</li>
 </ol>
 
 <div class="callout">
@@ -163,6 +164,16 @@ gerçekleşir.</p>
   yalnızca cihazdaki kopyayı siler; hesabın ve buluttaki verin durmaya devam
   eder. Hesabının da silinmesini istiyorsan yukarıdaki adımları izle ya da
   aşağıdaki e-posta yolunu kullan.</p>
+</div>
+
+<div class="callout">
+  <p><strong>Hesabını silmek mağaza aboneliğini iptal etmez.</strong> Abonelik
+  Apple App Store veya Google Play tarafından yönetilir. Yenilemeyi durdurmak
+  için aboneliğini ayrıca mağazadan iptal etmelisin; aksi halde mağaza ücret
+  almaya devam edebilir.</p>
+  <p><a href="https://support.google.com/googleplay/answer/7018481">Google Play
+  aboneliğini iptal et</a> ·
+  <a href="https://support.apple.com/118428">Apple aboneliğini iptal et</a></p>
 </div>
 
 <h2 id="eposta">2. Uygulamaya erişemiyorsan: e-posta ile talep</h2>
@@ -244,25 +255,43 @@ giriş yapamıyorsan silme talebini e-postayla iletebilirsin.</p>
     yalnızca uygulamanın nerede hata verdiğini gösterirler.</td>
   </tr>
   <tr>
-    <td>Fatura ve muhasebe kayıtları</td>
-    <td>PerFIT'te şu an ödeme veya abonelik bulunmadığı için böyle bir kayıt
-    <strong>oluşmuyor</strong>. İleride ücretli bir özellik eklenirse, mevzuatın
-    zorunlu kıldığı kayıtlar kanuni süreleri boyunca saklanır.</td>
+    <td>Mağaza aboneliğin</td>
+    <td>Hesap silme işlemi aboneliği <strong>iptal etmez</strong>. Yenilemeyi
+    durdurmak için aboneliğini App Store veya Google Play'den ayrıca iptal
+    etmelisin.</td>
+  </tr>
+  <tr>
+    <td>Satın alma, abonelik doğrulama ve mali kayıtlar</td>
+    <td>Satın alma ve ödeme App Store veya Google Play tarafından yürütülür;
+    PerFIT ödeme kartı bilgilerini almaz. PerFIT, erişimini doğrulamak için takma
+    adlı PerFIT hesap kimliğini, mağaza makbuz ve işlem verilerini ve abonelik
+    durumunu RevenueCat üzerinden işler; e-posta adresin RevenueCat'e
+    gönderilmez. Mağazanın veya hizmet sağlayıcının kendi saklama kurallarına
+    tabi kayıtlar ile mevzuat gereği tutulması zorunlu fatura ve muhasebe
+    kayıtları ilgili süreler boyunca kalabilir.</td>
   </tr>
 </table>
 
 <h2 id="sureler">4. Süreler</h2>
 
 <ul>
-  <li><strong>Anında:</strong> uygulama içinden sildiğinde buluttaki verin,
-  cihazındaki verin ve hesabın işlem sırasında kaldırılır.</li>
-  <li><strong>En geç 30 gün:</strong> yedeklerdeki kopyalar dâhil, verin
-  sistemlerimizden kalıcı olarak silinmiş olur. E-postayla gelen talepler de aynı
-  süre içinde sonuçlandırılır.</li>
+  <li><strong>İşlem sırasında:</strong> hesabına erişim kaldırılır, uygulama
+  oturumun kapatılır ve cihazındaki yerel veritabanı temizlenir.</li>
+  <li><strong>En geç 30 gün:</strong> hesabınla ilişkili profil, antrenman ve
+  bağlantı verileri ile bulut fotoğraf yedekleri kalıcı olarak silinir.
+  E-postayla gelen hesap silme talepleri de aynı süre içinde sonuçlandırılır.</li>
+  <li><strong>Hesabın açıkken tekil kayıtları sildiğinde:</strong> antrenman,
+  vücut ölçümü ve Akıllı Program ayarları görünür listelerden hemen kaldırılır.
+  Sunucudaki kayıt, eşitleme için 30 gün boyunca silinmiş olarak saklanır ve bu
+  süre dolduktan sonraki günlük sunucu temizliğinde kalıcı olarak silinir.
+  Teknik bir hata bu temizliği geciktirebilir.</li>
   <li><strong>En fazla 90 gün:</strong> hesapla ilişkilendirilmemiş çökme
   kayıtlarının saklama süresi.</li>
   <li><strong>30 gün:</strong> bırakılan kullanıcı adının karantina süresi.</li>
   <li><strong>180 gün:</strong> kimlikleri takma ada çevrilmiş şikâyet kayıtları.</li>
+  <li><strong>Sağlayıcı ve kanuni süreler:</strong> mağaza ve hizmet sağlayıcı
+  kayıtları kendi saklama kurallarına; tutulması zorunlu mali kayıtlar ilgili
+  kanuni sürelere tabidir.</li>
 </ul>
 
 <h2 id="iletisim">5. İletişim</h2>
@@ -275,7 +304,7 @@ giriş yapamıyorsan silme talebini e-postayla iletebilirsin.</p>
 
 <footer>
   <p>PerFIT · Hesap ve veri silme ·
-  Son güncelleme: <span class="fill">23.09.2026</span></p>
+  Son güncelleme: <span class="fill">20.10.2026</span></p>
 </footer>
 
 </div>

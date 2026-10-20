@@ -81,7 +81,7 @@
 <header>
   <p class="brand">PerFIT</p>
   <h1>Privacy Policy and Terms of Use</h1>
-  <p class="meta">Effective date: <span class="fill">4 September 2026</span> · Last updated: <span class="fill">16 October 2026</span></p>
+  <p class="meta">Effective date: <span class="fill">4 September 2026</span> · Last updated: <span class="fill">18 October 2026</span></p>
 </header>
 
 <div class="callout">
@@ -195,9 +195,9 @@ every request described in 2.8.</p>
     <td>You optionally add it at the end of a workout</td>
   </tr>
   <tr>
-    <td>Body Tracking photo</td>
-    <td>The photo you choose to add to Body Tracking (with EXIF metadata, including location, removed)</td>
-    <td>You optionally add it in Body Tracking</td>
+    <td>Body Tracking data and photo</td>
+    <td>The weight and body measurements you enter in Body Tracking, and the photo you choose to add (with EXIF metadata, including location, removed)</td>
+    <td>You optionally add them in Body Tracking, after giving your separate explicit consent</td>
   </tr>
   <tr>
     <td>Workout data</td>
@@ -221,8 +221,8 @@ every request described in 2.8.</p>
   </tr>
   <tr>
     <td>Usage data</td>
-    <td>The screens you view and the time you spend on them, the buttons you tap, how many times the app is opened; your user ID if you are signed in. Your workout data, plan names and the text you type are not sent.</td>
-    <td>Collected automatically</td>
+    <td>The screens you view and the time you spend on them, the buttons you tap, how many times the app is opened; summary numbers such as workout duration and set count; linked to your account if you are signed in. The weights you lift, your body measurements, injury and other health-declaration values, photos, plan names and the text you type are not sent.</td>
+    <td>Enabled by default; a saved off choice remains off. Accepting the Privacy Policy or Terms does not change this preference. You can turn it off or on at any time on the Privacy and Terms screen. Turning it off stops collection and resets the analytics data on your device; turning it off restricts no feature</td>
   </tr>
   <tr>
     <td>Notification data</td>
@@ -241,7 +241,7 @@ servers so that it can appear on your other devices along with your account;
 it is visible to the friends you have accepted and to your connected coach.
 <strong>Exercise images you add yourself</strong> stay only in your device's
 storage and are not uploaded to our servers.
-<strong>Your workout and Body Tracking photos:</strong> We access your camera and photos only when you choose to add a photo to a workout or to Body Tracking. The photo you add stays in your device's storage, attached to that workout or Body Tracking entry; if you are signed in to an account and “Photo Backup” in Settings is on (it is on by default), it is also backed up to your account, so it comes back if you change phones. The backup is stored encrypted on Google Cloud (Firebase Storage) servers in the EU (<code>europe-west1</code> region); only you can access it, your friends, your coach and other users cannot see these photos, and the photo is not shared with anyone; photo comparisons in Body Tracking are made only on your device. Before upload, all EXIF metadata in the photo, including location, is removed. You can turn backup off in Settings at any time; turning it off stops new uploads but does not delete the photos already in the cloud — you can delete those separately with “Delete Cloud Photos”. When you delete the photo, the workout or the Body Tracking entry, its cloud copy is deleted too; when you delete your account, all of your photo backups are deleted. If you use the app without an account (guest mode), the photo stays only on your device; it starts being backed up once you create an account and move your workouts to it. If your phone's own backup is turned on (iCloud or Google backup), the photo may also be included in that backup. When you send a
+<strong>Your workout and Body Tracking photos:</strong> We access your camera and photos only when you choose to add a photo to a workout or to Body Tracking. The photo you add stays in your device's storage, attached to that workout or Body Tracking entry; if you are signed in to an account and “Photo Backup” in Settings is on (it is on by default), it is also backed up to your account, so it comes back if you change phones. The backup is stored encrypted on Google Cloud (Firebase Storage) servers in the EU (<code>europe-west1</code> region); only you can access it, your friends, your coach and other users cannot see these photos, and the photo is not shared with anyone; photo comparisons in Body Tracking are made only on your device. Before upload, all EXIF metadata in the photo, including location, is removed. You can turn backup off in Settings at any time; turning it off stops new uploads but does not delete the photos already in the cloud — you can delete those separately with “Delete Cloud Photos”. When you delete the photo, the workout or the Body Tracking entry, its backed-up cloud copy is deleted when the deletion is successfully synced; the server-side technical record marking the photo as deleted follows the retention schedule in section 2.6. When you delete your account, all of your photo backups are deleted. If you use the app without an account (guest mode), the photo stays only on your device; it starts being backed up once you create an account and move your workouts to it. If your phone's own backup is turned on (iCloud or Google backup), the photo may also be included in that backup. When you send a
 share card to Instagram or another app yourself, that image is subject to the
 terms of the app you send it to.</p>
 
@@ -295,6 +295,11 @@ GDPR.</p>
     <td><strong>Your explicit consent</strong> (art. 9(2)(a) and 6(1)(a)) — these fields are optional, you can leave them blank</td>
   </tr>
   <tr>
+    <td>Saving your weight, body measurements and body photos in Body Tracking and backing them up to your account</td>
+    <td><strong>Your separate explicit consent</strong> (KVKK art. 6) — asked separately before the first entry; withdraw under Settings → Privacy → “Body Tracking Consent”</td>
+    <td><strong>Your explicit consent</strong> (art. 9(2)(a) and 6(1)(a)) — asked separately before the first entry; withdraw under Settings → Privacy → “Body Tracking Consent”</td>
+  </tr>
+  <tr>
     <td>Establishing friend connections and sharing progress</td>
     <td><strong>Your explicit consent</strong> — you are the one who sends and accepts the connection request</td>
     <td><strong>Your consent</strong> (art. 6(1)(a)) — you are the one who sends and accepts the connection request</td>
@@ -319,11 +324,7 @@ GDPR.</p>
     <td>Legitimate interest (art. 5/2-f)</td>
     <td>Legitimate interest (art. 6(1)(f))</td>
   </tr>
-  <tr>
-    <td>Measuring which features are used and how much, and improving the app accordingly</td>
-    <td>Legitimate interest (art. 5/2-f)</td>
-    <td>Legitimate interest (art. 6(1)(f))</td>
-  </tr>
+
   <tr>
     <td>Providing a paid membership that you buy</td>
     <td>Performance of a contract (art. 5/2-c)</td>
@@ -351,7 +352,7 @@ the processing that took place before.</p>
   help your coach guide you. You can use the app without this information. When
   you withdraw your consent in Settings, this information is deleted and sharing
   with your coach stops. Your injury information is never shared with
-  coaches.</p>
+  coaches. <strong>Body Tracking</strong> (weight, body measurements and body photos) has its own separate explicit consent (KVKK art. 6; GDPR art. 9(2)(a)), asked before your first entry; if you decline, nothing is saved and every other feature of the app keeps working. You can withdraw this consent any time under Settings → Privacy → “Body Tracking Consent”; when you do, your Body Tracking data is deleted from this device and your account (including backed-up photos), and from your other devices when they sync. If you are offline, the deletion in your account is retried the next time this device syncs while you are signed in to that account, and may be delayed until then. This consent is separate from, and does not affect, the injury, height and weight consent above. The latest weight you enter in Body Tracking also updates your profile weight; when you withdraw Body Tracking consent this value is deleted too, unless you have given the injury, height and weight consent, in which case it stays under that consent.</p>
 </div>
 
 <h3>2.4 Recipients and service providers</h3>
@@ -365,7 +366,7 @@ stores, which act for themselves:</p>
   <tr><th>Provider</th><th>Service</th><th>Data transferred</th></tr>
   <tr>
     <td>Google (Firebase)</td>
-    <td>Authentication, database and sync (Cloud Firestore, Cloud Functions), photo storage (Cloud Storage), error reporting (Crashlytics), device and app verification (App Check), usage measurement (Google Analytics), sending notifications (Firebase Cloud Messaging)</td>
+    <td>Authentication, database and sync (Cloud Firestore, Cloud Functions), photo storage (Cloud Storage), error reporting (Crashlytics), device and app verification (App Check), usage measurement (Google Analytics; on by default unless you turn it off in Privacy and Terms), sending notifications (Firebase Cloud Messaging)</td>
     <td>Account data, workout data, profile data, technical and diagnostic data, usage data, notification data, workout and Body Tracking photos</td>
   </tr>
   <tr>
@@ -412,35 +413,35 @@ to establish, exercise or defend a legal claim.</p>
 <p>Google Firebase is our service provider. The Firestore database runs in the
 EU region <code>eur3</code>, and Cloud Functions run in the
 <code>europe-west1</code> region. Workout photo backups are also stored in the EU, in the <code>europe-west1</code> region (Cloud Storage). Other Firebase services such as authentication,
-analytics and notifications may also process data; we do not claim that all
+analytics (on by default unless you turn it off in Privacy and Terms) and notifications may also process data; we do not claim that all
 processing is limited to these regions. Transfers outside Türkiye rely, under KVKK art. 9, on the
 standard contractual clauses and additional technical and organizational
 safeguards in Google's data processing terms. You can also review Google's
 <a href="https://firebase.google.com/terms/data-processing-terms">Firebase Data Processing and Security Terms</a>.</p>
 
-<p>RevenueCat, which verifies your subscription status, is located in the United States; this transfer relies on standard contractual clauses. You can also review RevenueCat's <a href="https://www.revenuecat.com/privacy/">privacy policy</a> and <a href="https://www.revenuecat.com/dpa/">data processing agreement (DPA)</a>.</p>
+<p>RevenueCat, which verifies your subscription status, is located in the United States. For users in Türkiye, the mechanism we plan to use under KVKK art. 9 (the standard contract published by Türkiye's Personal Data Protection Board) has not yet been completed; it is being arranged, and we do not claim that EU standard contractual clauses satisfy KVKK. For users in the EEA, this transfer relies on the standard contractual clauses in RevenueCat's data processing agreement. You can also review RevenueCat's <a href="https://www.revenuecat.com/privacy/">privacy policy</a> and <a href="https://www.revenuecat.com/dpa/">data processing agreement (DPA)</a>.</p>
 
 <p>If you use PerFIT from the European Economic Area, your data is processed
 by us in Türkiye and by providers that may be located in the United States and
 other countries outside the EEA. For such transfers, Chapter V of the GDPR
 applies; we rely on the safeguards it provides for, in particular the standard
-contractual clauses contained in Google's data processing terms. You can ask us
+contractual clauses contained in Google's data processing terms (for Google) and in RevenueCat's data processing agreement (for RevenueCat). You can ask us
 for information about the safeguards at the address in 2.1.</p>
 
 <p>Using the app requires this transfer to take place; if you do not want it, you
 can use the app only in <strong>guest mode</strong> — in this mode your workout
 and profile data never leave your device; only usage data that is not linked to
-your identity, your device's notification token for announcement notifications
+your identity (on by default unless you turn it off in Privacy and Terms), your device's notification token for announcement notifications
 and error and crash logs are sent. Even in guest mode, the app contacts RevenueCat with a random anonymous ID to verify the subscription status.</p>
 
 <h3 id="hesap-silme">2.6 Retention and deleting your account</h3>
 
 <ul>
   <li>Your data is kept <strong>while your account is open.</strong></li>
-  <li><strong>Records you delete</strong> (workouts, body measurements and photos, Smart Program adjustments) are permanently deleted <strong>within 30 days at the latest</strong>; a data export does not include deleted records.</li>
-  <li><strong>Your backed-up workout and Body Tracking photos</strong> are deleted when you delete the photo, the workout or the Body Tracking entry; when you delete your account, all photo backups are permanently deleted <strong>within 30 days at the latest</strong>.</li>
+  <li><strong>Records you delete</strong> (workouts, body measurements and Smart Program adjustments; photo files follow the rule below) are removed from visible lists on your device immediately; data exports do not include deleted records. The server record in your account remains stored and marked as deleted for synchronization for <strong>30 days</strong>, and is permanently deleted in the next daily server cleanup after that period. A technical error may delay this cleanup.</li>
+  <li><strong>Your Body Tracking data</strong> (including backed-up photos) is kept until you withdraw your Body Tracking consent or delete the entry; when you withdraw consent it is deleted from your device and your account. The cloud copies of <strong>your backed-up workout and Body Tracking photos</strong> are deleted when deletion of the photo, workout or Body Tracking entry is successfully synced; the server-side technical record marking the photo as deleted is kept for synchronization for <strong>30 days</strong> and then follows the daily server cleanup schedule above. When you delete your account, all photo backups are permanently deleted <strong>within 30 days at the latest</strong>.</li>
   <li>When you delete your account, your profile, workout and connection data is
-      permanently deleted, as with deleted records above, <strong>within 30 days at the latest.</strong></li>
+      permanently deleted <strong>within 30 days at the latest.</strong></li>
   <li>When your username is released or your account is deleted, it stays in
       quarantine for <strong>30 days.</strong></li>
   <li>"Power Up" reactions are removed when your account is deleted.</li>
@@ -519,7 +520,7 @@ European Union or the European Economic Area, or the alleged infringement took
 place there, you can complain to the data protection authority of your country
 of residence, your place of work or the place of the alleged infringement
 (GDPR art. 77). In Türkiye, the authority is the Personal Data Protection
-Authority (Kişisel Verileri Koruma Kurulu, KVK Kurulu). We would appreciate the
+Board (Kişisel Verileri Koruma Kurulu, KVK Kurulu). We would appreciate the
 chance to resolve your concern first, so please feel free to contact us
 beforehand.</p>
 
